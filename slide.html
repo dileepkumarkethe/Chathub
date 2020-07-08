@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+.logoTitle {
+  font-family: 'inhert';
+  font-size: 50px;
+  color: #231407;
+  margin: auto;
+  text-decoration: none;
+  margin: 10px 10px 0px 10px;    
+  }
+  .left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+#main input.centreButtonTwo{
+     width: 120px;
+     padding: 10px;
+     cursor: pointer;
+     font-size: 94%;
+     background: black;
+     color:white;
+     float: middle;                  
+     align-items: center;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 900;
+  }
+#main input.centreButtonOne{ 
+  width: 100px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 94%;
+  background: black;
+  color:white;
+  float: middle;                  
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  }
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#" onclick="profile.html">Profile</a>
+  <a href="#">ChatBox</a>
+  <a href="#">Queries</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+        <a id="webpageTitle" class="logoTitle">Chathub</a>
+        <input type="button" class = "centreButtonOne" value="All Posts" >
+        <input type="button" id="createPost" class ="centreButtonTwo" value="Create Post">
+  <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
+<div>
+
+  <!-- Insert code for Create Post modal here -->
+    <div class="modal">
+                <div class="modalcontent">
+                        <span class="close">&times;</span>
+                        <div class="modalHeader">
+                                <h1 class="modalTitle">Create Post</h1>
+                                <hr id="hr">
+                        </div>
+                        <div class="modalbody">
+                                <form>
+                                            <div ng-app="">
+                                                            <p>Title:<input type="text" ng-model="name" placeholder="Enter title here"></p>
+                                                            <p>Caption:<input type="text" ng-model="caption"></p>
+                                                            <h1>{{name}}</h1>
+                                                            <h1>{{caption}}</h1>
+                                                            </div>
+                                        <div>
+                                                <label>For whom??</label>
+                                                <select>
+                                                    <option value="Public">Public</option>
+                                                    <option value="Private">Private</option>
+                                                    <option value="closeFriends">closeFriends</option>
+                                                  </select>
+                                        </div>
+                                        <button class="buttonColorOne" type="submit">Post</button>
+                                        <button class="red" type="submit" onclick="remove()">Cancel</button>
+                                 </form>
+                        </div>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+   
+</body>
+</html> 

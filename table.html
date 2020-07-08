@@ -1,0 +1,39 @@
+<html>
+<head>
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style type="text/css" media="screen">
+        </style>
+                <script>
+                        angular.module("myapp", [])
+                        .controller("controller", function($scope){
+                            $scope.subject="Maths";
+                            $scope.marks="75";
+                            return $scope.subject+","+ $scope.marks;}
+                        });
+                    </script>
+
+</head>
+<body>   
+    <div class="div1">
+            <div ng-app="myapp" ng-controller="controller">		
+                <h2>Angular Sample Application</h2>
+                Enter first name: <input type="text" ng-model="firstname"><br>
+                Enter last name: <input type="text" ng-model="lastname"><br>
+                Enter fees: <input type="text" ng-model="fee"><br>
+                Enter Subject: <input type="text" ng-model="subject" class="subject"><br>
+                Name in UPPER CASE: {{firstname +" "+ lastname | uppercase}} <br>
+
+                Name in LOWER CASE: {{firstname +" "+ lastname | lowercase}}<br>
+                fees: {{fee | currency="$"}}<br>
+                Subject:
+                <ul>
+                    <li>
+                         {{subject}}, {{marks}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+</body>
+</html>

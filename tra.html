@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>delay demo</title>
+  <style>
+      #black{
+          background-color: black!important;
+          color:white;
+          width:10%;
+          height:60%;
+
+
+      }
+  div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+  }
+  .first {
+    background-color:red;
+    border-radius: 50%;
+  }
+  .second {
+    background-color:yellow;
+    border-radius: 50%;
+  }
+  .third {
+    background-color: green;
+    border-radius: 50%;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div id="black">
+<h3 >Traffic Light</h3>
+<div class="first"></div><br><br>
+<div class="second"></div><br><br>
+<div class="third"></div><br><br>
+<p><button>Start</button></p>
+</div>
+ 
+<script>
+$( "button" ).on('click',function() {
+    loop();
+    setInterval(loop,2100);
+    function loop(){
+  $( "div.first" ).slideUp( 300 ).delay( 500 ).fadeIn( 700 );
+  $( "div.second" ).slideUp( 300 ).delay( 1000 ).fadeIn( 400 );
+  $( "div.third" ).slideUp( 300 ).delay(1500).fadeIn( 400 );
+    }
+});
+</script>
+
+ 
+</body>
+</html>

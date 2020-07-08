@@ -1,0 +1,276 @@
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }  
+body
+{
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center center;
+   background-size: cover;
+   margin: 0 !important;
+   background-size: 100% cover!important;
+   overflow:scroll;
+   display: block;
+}
+.fh5co-heading {
+   font-size: 18px;
+   margin-bottom: 2em;
+   font-weight: 500;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+} 
+.poster{
+    width: 100%;
+}
+a{
+   padding: 10px;
+}
+.narrow-content{
+      position: relative;
+      width: 93%;
+      margin: 0 auto;
+      padding: 4em 0;
+      clear: both;
+}
+
+/* Set a style for the rest of the elements besides the header elements on the index.html page */
+#hr{
+   color:  #A9A9A9;
+}   
+
+input.topBtn {
+width: 90px;
+padding: 10px;
+cursor: pointer;
+font-weight: 500;
+font-size: 90%;
+background:black;
+color: #fff;
+float: right;                  
+margin: 10px 10px 0px 0px;
+font-family: Arial, Helvetica, sans-serif;
+}
+.logoTitle {
+font-family: 'inhert';
+font-size: 50px;
+color: #231407;
+margin: auto;
+text-decoration: none;
+margin: 10px 10px 0px 10px;    
+}
+.middleTxt{
+   font-family: 'Marck Script', cursive;
+   margin-top: 0;
+   margin: 0 0 0px 10px;
+   color: white;
+   font-size:27px; 
+}
+button.centreButtonOne{ /* changed*/
+width: 100px;
+padding: 10px;
+cursor: pointer;
+font-size: 94%;
+background: rgb(190, 167, 7);
+color:black;
+float: middle;                  
+align-items: center;
+margin: 220px 5px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 900;
+}
+a{ /* changed*/
+   color: black; 
+   text-decoration: none;
+}
+input.centreButtonTwo{
+   width: 120px;
+   padding: 10px;
+   cursor: pointer;
+   font-size: 94%;
+   background: rgb(190, 167, 7);
+   color:black;
+   float: middle;                  
+   align-items: center;
+   margin: 220px 5px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 900;
+}
+.postButtons
+{
+   text-align: center;
+}
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: -51px;
+   top: -69px;
+   width: 117%; /* Full width */
+   height: 303%;
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+ 
+ /* Modal Content/Box */
+ .modal-content {
+   background-color: #fefefe;
+   margin: 15% auto;
+   padding: 10px;
+   border: 1px solid #888;
+   width: 30%; /*changed */  
+   height: auto;
+ }
+ 
+ /* The Close Button */
+ .close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+ 
+ .close:hover,
+ .close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+h3
+ {
+    color: black;
+    text-align: center;
+    font-size: 22px;
+ }
+
+ .buttonColor
+{
+    background-color:#4CAF50;
+    width: 467px;/*changed */
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 90%;
+    color: #fff;
+    float: right;                  
+    border: 0;
+    margin: 20px 0px 0px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+.buttonColorOne{
+   background-color:#4CAF50;
+    width: 300px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 90%;
+    color: #fff;
+    float: right;                  
+    border: 0;
+    margin: 20px 0px 0px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+
+}
+.inputField
+{
+    display: flex;
+    width: 451px; /*changed */  
+    padding: 10px;
+    float: right; /*changed */  
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0ebeb;
+    border: 0;
+    margin-bottom: 10px;
+    flex-flow: row wrap;
+}
+label
+{
+   font-weight: bold;
+   padding: 10px;
+   margin: 10px 0px 0px 0px;
+}
+.not
+{
+    text-align: center;
+    font-weight: bold;
+}
+.sign {
+   color:blue;
+   background-color: transparent;
+   text-decoration: none;
+   cursor: pointer;
+} 
+.modalcontent
+{
+   background-color: #fefefe;
+   margin: 15% auto; 
+   padding: 10px;
+   border: 1px solid #888;
+   width: 40%; 
+   height: 60%;
+   vertical-align: middle;
+}
+.textarea
+{
+    padding: 10px;
+    width: 94%; /*changed */
+    margin-left: 10px;
+    /*changed */
+    /*changed */
+    background-color: #f0ebeb; /*changed */
+    border: 0;/*changed */
+}
+h1
+{
+   color: black;
+   text-align: center;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.red
+{
+    background-color:red;
+    width: 240px;/*changed */
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 90%;
+    color: #fff;
+    float: left;    /*changed */              
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 0px 0px 0px; /*changed */  
+    margin-bottom: 20px;
+}
+.inputField1
+{
+    display: flex;
+    width: 515px; /*changed */
+    padding: 10px;
+    float: right;         
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0ebeb;
+    border: 0;
+    margin-bottom: 10px;
+
+}                 
+.modalContent {
+   background-color: #fefefe;
+   margin: 10% auto; /*changed*/
+   padding: 10px;
+   border: 1px solid #888;
+   width: 30%;/*changed*/
+   height: 73%;/*changed*/
+}
+.row {
+   margin-left: -15px;
+   margin-right: -15px;
+}

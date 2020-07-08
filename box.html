@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<head>
+        <link href="box.css" rel="stylesheet"/>
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+        <style>
+            body {
+            margin: 0 auto;
+             max-width: 800px;
+        padding: 0 20px;
+        background: url('image.png');
+        background-repeat: no-repeat;
+        background-size: 100% cover!important;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    textarea{
+        width: 782px;
+    }
+    .container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+h2{
+    color: blanchedalmond;
+    text-align: left;
+    font-size: 26px;
+    width: -328px;
+}
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }  
+  input.topBtn {
+width: 90px;
+padding: 10px;
+cursor: pointer;
+font-weight: 500;
+font-size: 90%;
+background:black;
+color: #fff;
+float: right;                  
+margin: 10px 10px 0px 0px;
+font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  color:white;
+}
+        </style>
+</head>
+
+<body>
+                              <h2>Chat Messages</h2>
+                                <textarea rows="4" name="commnt" id="userComments"
+                                        placeholder="Chathub..."></textarea>
+                                        <div id="commentBg">
+                                                <button id="addList" onclick="addComments(userComments)">Send</button>
+                                        </div>
+                                <div id="allComments">Messages</div>
+                                <div id="bg">
+                                        <div id="addEventNames"></div>
+                                </div>
+                        </div>
+                        <div class="top-right">
+                            <button type="button" class = "topBtn"><a href="pit.html" style="text-decoration: none;">Logout</a></button>
+                            <button type="button" class = "topBtn"><a href="index.html" style="text-decoration: none;">About Us</a></button>
+                        </div>
+                        <div class="container">
+                          <img src="assets/img/faces/face_1.jpg" alt="Avatar" style="width:100%;">
+                          <p>Hello. How are you today?</p>
+                          <span class="time-right">11:00</span>
+                        </div>
+                        
+                        <div class="container darker">
+                          <img src="assets/img/faces/face_2.png" alt="Avatar" class="right" style="width:100%;">
+                          <p>Hey! I'm fine. Thanks for asking!</p>
+                          <span class="time-left">11:01</span>
+                        </div>
+                        
+                        <div class="container">
+                          <img src="assets/img/faces/face_1.jpg" alt="Avatar" style="width:100%;">
+                          <p>Sweet! So, what do you wanna do today?</p>
+                          <span class="time-right">11:02</span>
+                        </div>
+                        
+                        <div class="container darker">
+                          <img src="assets/img/faces/face_2.png" alt="Avatar" class="right" style="width:100%;">
+                          <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+                          <span class="time-left">11:05</span>
+                        </div>
+                        <script src="box.js">
+                        </script>
+
+</body>

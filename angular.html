@@ -1,0 +1,49 @@
+<html>
+<head>
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style type="text/css" media="screen">
+		.div1 {
+			border: 2px solid black;
+			width: 30%;
+			padding: 20px;
+		}
+        </style>
+        <script>
+                angular.module("myapp",[])
+                .controller("controller",function($scope) {
+                    $scope.names=[
+                    {country:"US",locale:"en-us" },
+                    {country:"UK",locale:"en-gb"},
+                    {country:"France",locale:"en-FR"},
+                ];
+                });
+                </script>
+                <script>
+                        angular.module("myapp", [])
+                        .controller("controller", function($scope){
+                            $scope.names = [
+                            {country:"United Kingdoms", locale:"en-GB"},
+                            {country:"France", locale:"en-FR"},
+                            {country:"United States", locale:"en-US"},
+                            ];
+                        });
+                    </script>
+</head>
+<body>   
+    <div class="div1">
+            <div ng-app="myapp" ng-controller="controller">		
+                <h2>Angular Application</h2>
+                Enter your name: <input type="text" ng-model="name">
+                <h5>Hello {{name}}!</h5>
+                List of countries with locale: 
+                <ol>
+                    <li ng-repeat="x in names | orderBy:'country':'reverse'">
+                        Country: {{x.country}}, Locale: {{x.locale}}
+                    </li>
+                </ol>
+            </div>
+        </div>
+    
+</body>
+</html>

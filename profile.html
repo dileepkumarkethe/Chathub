@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='bloglist.css' rel='stylesheet' type='text/css'>    
+    <link href='header.css' rel='stylesheet' type='text/css'>
+    <link href='..\css\font.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="..\font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      #imageUpload
+{
+    display: none;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    $("#profileImage").click(function(e) {
+      $("#imageUpload").click();
+  });
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <image id="profileImage" src="http://lorempixel.com/100/100" />
+  <input id="imageUpload" type="file" 
+         name="profile_photo" placeholder="Photo" required="" capture>     
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+
+        <link href='..\css\post.css' rel='stylesheet' type='text/css'>
+        <link href='..\css\header.css' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="..\font-awesome-4.7.0/css/font-awesome.min.css">
+        <link href='..\css\font.css' rel='stylesheet' type='text/css'>
+        <style>
+        </style>
+</head>
+
+<body>
+        <div id="main-container-div">
+
+                <div class="header">
+        
+                    <!-- Insert code for Sign Up, Sign In button here. Add code for "ScriBBler" heading and the sub-heading -->
+                    <div class="top-right">
+                        <input class="topBtn" type="button" value="Sign Up">
+                        <input class="topBtn" type="button" value="Sign In"></div>
+                        <div class="top-left">
+                        <a id="webpageTitle" class="logoTitle">Chathub</a>
+                        </div>
+        
+                    </div>
+                </div>
+              <div> 
+                                <div class="lykBlgBtn">
+                                        <!-- Insert code for Like button, Comment button, Comment box here-->
+                                        <button id="lykBlg" onclick="postLiked()"><i class="fa fa-thumbs-up">
+                                                        Like</i></button>
+                                        <div id="likeCount">Be the first one to like this!</div>
+                                </div>
+
+                                <textarea rows="4" name="commnt" id="userComments"
+                                        placeholder="Leave a comment..."></textarea>
+
+                                <div id="commentBg">
+                                        <button id="addList" onclick="addComments(userComments)">Comment</button>
+                                </div>
+                                <div id="allComments">All Comments</div>
+                                <div id="bg">
+                                        <div id="addEventNames"></div>
+                                </div>
+                        </div>
+
+
+
+                        <script src="..\js\post.js" defer></script>
+                        <script src="..\js\header.js">
+                        </script>
+
+</body>

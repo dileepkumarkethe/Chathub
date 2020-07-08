@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='bloglist.css' rel='stylesheet' type='texts/css'>    
+    <link href='header.css' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+    <link href='font.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="..\font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body{
+        background: url('online-media.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% cover!important;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+ 
+    .modalcontent
+{
+   background-color: #fefefe;
+   margin: 15% auto; 
+   padding: 10px;
+   border: 1px solid #888;
+   width: 40%; 
+   height: 60%;
+   vertical-align: middle;
+}
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: -331px;
+   top: -268px;
+   width: 148%; /* Full width */
+   height: 144%;
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+ 
+ .close:hover,
+ .close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+label
+{
+   font-weight: bold;
+   padding: 10px;
+   margin: 10px 0px 0px 0px;
+}
+.inputField1
+{
+    display: flex;
+    width: 594px; /*changed */
+    padding: 10px;
+    float: right;         
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0ebeb;
+    border: 0;
+    margin-bottom: 10px;
+
+}    
+.textarea
+{
+    padding: 10px;
+    width: 596px; /*changed */
+    margin-left: 10px;
+    /*changed */
+    /*changed */
+    background-color: #f0ebeb; /*changed */
+    border: 0;/*changed */
+    float: right;
+}             
+h1
+{
+   color: black;
+   text-align: center;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.buttonColorOne{
+   background-color:#4CAF50;
+    width: 390px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 90%;
+    color: #fff;
+    float: right;                  
+    border: 0;
+    margin: 20px 0px 0px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+
+}
+.red
+{
+    background-color:red;
+    width: 380px;/*changed */
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 90%;
+    color: #fff;
+    float: left;    /*changed */              
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 0px 0px 0px; /*changed */  
+    margin-bottom: 20px;
+}
+.logoTitle {
+font-family: 'Satisfy', cursive;
+font-size: 50px;
+color: antiquewhite;
+margin: auto;
+text-decoration: none;
+margin: 10px 10px 0px 10px;    
+}
+input.centreButtonTwo{
+   width: 120px;
+   padding: 10px;
+   cursor: pointer;
+   font-size: 94%;
+   background: black;
+   color:white;
+   float: middle;                  
+   align-items: center;
+   margin: 220px 5px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 900;
+}
+button.centreButtonOne{ /* changed*/
+width: 122px;
+padding: 10px;
+cursor: pointer;
+font-size: 94%;
+background:black;
+color:white;
+float: middle;                  
+align-items: center;
+margin: 220px 5px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 900;
+}
+</style>
+<body>
+<div id="main-container-div">
+    <div class="header">
+        <!-- Insert code for Sign Up, Sign In button here. Add code for "ScriBBler" heading and the sub-heading -->
+            <div class="top-left">
+                <a id="webpageTitle" class="logoTitle">Chathub</a>
+                </div>
+                <div class="top-right">
+                <button type="button" class = "centreButtonOne" value="All Posts"><a href="box.html" style="text-decoration: none;">Chatter Box</a></button> <!--/* changed*/--> 
+                <input type="button" id="createPost" class ="centreButtonTwo" value="Create Post">
+                </div>
+            </div>
+    </div>
+    
+</div>
+<div>
+   
+<table>
+<tr><td><center><p id="displayhere" style="color: white;">Details:</p></center></td></tr>
+</table>
+<script>
+function show(frm) {
+   var str = ""
+    str += "Title "+"<br/>" + frm.title.value + "<br/>";
+    str += "Content "+"<br/>"+ frm.Content.value + "<br/>";
+    str += "<br/>" + frm.pic.value + "<br/>";
+    document.getElementById('displayhere').innerHTML = str
+   return false;
+}
+</script>
+<div class="modal">
+        <div class="modalcontent">
+                <span class="close">&times;</span>
+                <div class="modalHeader">
+                        <h1 class="modalTitle">Create Post</h1>
+                        <hr id="hr">
+                </div>
+                <div class="modalbody">
+                        <form>
+                                <div>
+                                        <label>Title</label>
+                                        <input class="inputField1" type="text" name="title" placeholder="Enter title" required>
+                                </div><br><br>
+                                <div>
+                                        <label>Content for post</label>
+                                        <input class="textarea" type="textarea" name="Content" rows="20" cols="50" placeholder="Enter Anything" required>
+                                </div><br><br><br>
+                                <div>
+                                    <label>Upload Picture/Video</label>
+                                    <input type="file" name="pic" accept="file_extension|audio/*|video/*|image/*|media_type">
+                                </div><br>
+                                <div>
+                                        <label>For whom??</label>
+                                        <select>
+                                            <option value="Public">Public</option>
+                                            <option value="Private">Private</option>
+                                            <option value="closeFriends">closeFriends</option>
+                                        </select>
+                                </div>
+                                <button class="buttonColorOne" type="submit" onclick="return show(this.form)">Post</button>
+                                <button class="red" type="submit" onclick="remove()">Cancel</button>
+                         </form>
+                </div>
+
+    </div>
+
+
+        <div class="allPostsContainer">
+                <div class="post" id="fpost">
+                    <div class="post-left">
+                        <p class="post-username">Jimi</p>
+                    </div>
+                    <div class="post-content">
+                        
+                        <!-- Insert code for Trash icon here -->
+                        <i id="myBtn" class="fa fa-trash" style="font-size: 24px" aria-sort="ascending"></i>
+                        <span class="post-title">Hello there ! This is Post 1. </span>
+                        <p class="post-desc">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz.</p>
+                        <!-- Insert code for ... icon here -->
+                        <span onclick="window.location.href='post.html'" id="dots" style="font-size:24px">&#x2026;</span>
+            
+                    </div>
+                        
+                </div>
+                <div class="post" id="spost">
+                <div class="post-left">
+                    <p class="post-username">Jimi</p>
+                </div>
+                <div class="post-content">
+                    
+                    <!-- Insert code for Trash icon here -->
+                    <i id="myBtn" class="fa fa-trash" style="font-size: 24px" aria-sort="ascending"></i>
+                    <span class="post-title">Hello there ! This is Post 2. </span>
+                    <p class="post-desc">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz.</p>
+                    <!-- Insert code for ... icon here -->
+                    <span onclick="window.location.href='post.html'" id="dots" style="font-size:24px">&#x2026;</span>
+            
+                </div>
+            </div>
+                <div class="post" id="tpost">
+                    <div class="post-left">
+                        <p class="post-username">Jimi</p>
+                    </div>
+                    <div class="post-content">
+            
+                        <!-- Insert code for Trash icon here -->
+                        <i id="myBtn" class="fa fa-trash" style="font-size: 24px" aria-sort="ascending"></i>
+            
+                            <span class="post-title">Hello there ! This is Post 3. </span>
+                            <p class="post-desc">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz.</p>
+            
+                        <!-- Insert code for ... icon here -->
+                        <span onclick="window.location.href='post.html'" id="dots" style="font-size:24px">&#x2026;</span>
+            
+            
+                    </div>
+                   
+                </div>
+                <div class="post" id="fopost">
+                    <div class="post-left" id="post-right">
+                        <p class="post-username">Jimi</p>
+                    </div>
+                    <div class="post-content">
+            
+                        <!-- Insert code for Trash icon here -->
+                        <i id="myBtn" class="fa fa-trash" style="font-size: 24px" aria-sort="ascending"></i>
+            
+                            <span class="post-title">Hello there ! This is Post 4. </span>
+                            <p class="post-desc">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz.</p>
+            
+                        <!-- Insert code for ... icon here -->
+                        <span onclick="window.location.href='post.html'" id="dots" style="font-size:24px">&#x2026;</span>
+            
+            
+                    </div>
+                </div>
+            
+                <div class="post" id="postMiddle">
+                        <div class="post-left" id="post-center">
+                            <p class="post-username">Jimi</p>
+                        </div>
+                        <div class="post-content">
+            
+                            <!-- Insert code for Trash icon here -->
+                            <i id="myBtn" class="fa fa-trash" style="font-size: 24px" aria-sort="ascending"></i>
+            
+                                <span class="post-title">Hello there ! This is Post 5. </span>
+                                <p class="post-desc">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz.</p>
+                            
+                            <!-- Insert code for ... icon here -->
+                            <span onclick="window.location.href='post.html'" id="dots" style="font-size:24px">&#x2026;</span>
+            
+                        
+                        </div>
+                    </div>
+            
+                    <div>
+            
+                        <!-- The Modal -->
+                       <div id="myModal" class="modalThree">
+                           <!-- Insert code for delete modal here -->
+                        
+            
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            
+                            <div class="modal-body">
+                              <p class="sure">Are you sure you want to delete this post?</p>
+                              <button class="redColor" type="submit">Yes</button>
+                              <button class="greenColor" type="submit" onclick="remove()">No</button>
+                            </div>
+                            
+                          </div>
+            
+              
+                      </div>
+                    </div>
+                    
+                </div>
+                </body>
+  <script src="bloglist.js">  </script>
+    <script src="post.js"> </script>
